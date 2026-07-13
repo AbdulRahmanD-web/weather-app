@@ -1,0 +1,42 @@
+
+
+
+@media (max-width: 768px){
+
+ .hero_city,
+ .nav_btn{
+    display: none;
+ }
+
+ .nav_conteiner{
+   flex-wrap: wrap;
+ }
+
+ .hero_conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+  
+
+}
+
+   @media (max-width: 480px){
+ 
+      .hero_time{
+         display: none;
+      } 
+      
+      .hero_city{
+         display: flex;
+      }
+      .footer_top{
+         display: flex;
+         flex-direction: column;
+      }
+
+      .footer_right{
+         padding: 0 10px;
+      }
+
+   }

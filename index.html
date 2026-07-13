@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/media.css"/>
+    <link rel="icon"  href="img/sun.png" type="image/png">
+    <title>Weather App</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <div class="nav_conteiner">
+          <div class="logo">
+            <img src="img/sun.png" class="logo_img">
+            <span class="logo_text">WEATHER.APP</span>
+          </div>
+
+          <label class="label glass-effect">
+            <input
+              class="label_input glass-effect"
+              type="text"
+              placeholder="Поиск мегаполиса"
+            />
+          </label>
+
+          <button class="nav_btn">Поиск</button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero_conteiner">
+
+
+      <div class="hero_time glass-effect">
+         <h2 class="hero_title">📅 Прогноз на 7 дней:</h2>
+         <div class="forecast__container" id="forecastContainer">
+          <div class="hero_block"><span>Понедельник</span><span>☀️ 24/16° </span><span>Ясно </span></div>
+          <div class="hero_block"><span>Вторник</span><span>☀️ 24/16° </span><span>Ясно </span></div>
+          <div class="hero_block"><span>Среда</span><span>☀️ 24/16° </span><span>Ясно </span></div>
+          <div class="hero_block"><span>Четверг</span><span>☀️ 24/16° </span><span>Ясно </span></div>
+          <div class="hero_block"><span>Пятница</span><span>☀️ 24/16° </span><span>Ясно </span></div>
+          <div class="hero_block"><span>Суббота</span><span>☀️ 24/16° </span><span>Ясно </span></div>
+          <div class="hero_block"><span>Воскресенья</span><span>☀️ 24/16° </span><span>Ясно </span></div>
+         </div>
+         </div>
+          
+          
+        <div class="hero_city glass-effect">
+            <h2 class="hero_title" id="cityName">Москва</h2>
+            <span class="hero_text" id="dateText">Понедельник -- 22.06.2026</span>
+            <span class="hero_text accent" id="tempText">☀️ +24</span>
+            <span class="hero_text condition" id="conditionText">⏳ Загрузка данных...</span>
+
+            <div class="hero_box">
+              <h4 class="hero_str humidity" id="humidityText">Влажность 64%</h4>
+            </div>
+            <div class="hero_box">
+              <h4 class="hero_str feels" id="descText">Ясно без осадков</h4>
+            </div>           
+            
+            <div class="hero_box">
+              <span class="hero_str accent_yellow">🌅 Восход: <span id="sunriseText">--:--</span></span>
+            </div>           
+            
+            <div class="hero_box">
+             <span class="hero_str accent_orange">🌇 Закат: <span id="sunsetText">--:--</span></span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="details">
+        <div class="details_container grid">
+          <div class="details_card glass-effect tem">
+            <span class="details_icon content">🌡️</span>
+            <h3 class="details_value content status-red" id="detailTemp">+24</h3>
+            <span class="details_text content status-red">Температура</span>
+          </div>
+
+          <div class="details_card glass-effect hum">
+            <span class="details_icon content">💧</span>
+            <h3 class="details_value content accent-cold" id="detailHumidity">64%</h3>
+            <span class="details_text content accent-cold">Влажность</span>
+          </div>
+
+          <div class="details_card glass-effect wind">
+            <span class="details_icon content">💨</span>
+            <h3 class="details_value content text-main" id="detailWind">5 м/с</h3>
+            <span class="details_text content text-main">Ветер</span>
+          </div>
+
+          <div class="details_card glass-effect pres">
+            <span class="details_icon content">📊</span>
+            <h3 class="details_value content status-green" id="detailPressure">750</h3>
+            <span class="details_text content status-green">Давление</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="city">
+
+        <div class="city_conteiner">
+
+          <div class="city_slayder">
+
+            <div class="city_track">
+
+              <div class="city_card">
+                <h4 class="city_title">Москва</h4>
+                  <p class="city_paragrah">Средняя температура :</p>
+                  <span class="city_info accent-cold">❄️ Зимой : -10 </span>
+                  <span class="city_info accent_orange">🍂 Осенью : +6</span>
+                  <span class="city_info status-green">🌿 Весной : +5</span>
+                  <span class="city_info accent_yellow  ">☀️ Летом : +22</span>
+              </div>
+
+              <div class="city_card">
+                 <h4 class="city_title">Санкт-Петербург</h4>
+                  <p class="city_paragrah">Средняя температура :</p>
+                  <span class="city_info accent-cold">❄️ Зимой : -8 </span>
+                  <span class="city_info accent_orange">🍂 Осенью : +5</span>
+                  <span class="city_info status-green">🌿 Весной : +4</span>
+                  <span class="city_info accent_yellow">☀️ Летом : +20</span>               
+              </div>
+
+              <div class="city_card">
+                 <h4 class="city_title">Краснодар</h4>
+                  <p class="city_paragrah">Средняя температура :</p>
+                  <span class="city_info accent-cold">❄️ Зимой : -2 </span>
+                  <span class="city_info accent_orange">🍂 Осенью : +12</span>
+                  <span class="city_info status-green">🌿 Весной : +10</span>
+                  <span class="city_info accent_yellow">☀️ Летом : +26</span>               
+              </div>
+
+              <div class="city_card">
+                <h4 class="city_title">Екатеренбург</h4>
+                  <p class="city_paragrah">Средняя температура :</p>
+                  <span class="city_info accent-cold">❄️ Зимой : -15</span>
+                  <span class="city_info accent_orange">🍂 Осенью : +3</span>
+                  <span class="city_info status-green">🌿 Весной : +2</span>
+                  <span class="city_info accent_yellow">☀️ Летом : +19</span>                
+              </div>
+
+              <div class="city_card">
+                <h4 class="city_title">Казань</h4>
+                  <p class="city_paragrah">Средняя температура :</p>
+                  <span class="city_info accent-cold">❄️ Зимой : -12</span>
+                  <span class="city_info accent_orange ">🍂 Осенью : +5</span>
+                  <span class="city_info status-green">🌿 Весной : +4</span>
+                  <span class="city_info accent_yellow">☀️ Летом : +21</span>                
+              </div>             
+              
+              
+              <div class="city_card">
+                <h4 class="city_title">Новгород</h4>
+                  <p class="city_paragrah">Средняя температура :</p>
+                  <span class="city_info accent-cold">❄️ Зимой : -12</span>
+                  <span class="city_info accent_orange">🍂 Осенью : +5 </span>
+                  <span class="city_info status-green">🌿 Весной : +4</span>
+                  <span class="city_info accent_yellow">☀️ Летом : +20</span>                
+              </div>  
+
+            </div>
+          </div>
+
+          <div class="city_arrow">
+             <button class="city_btn prev">Prev</button>         
+            <button class="city_btn next">Next</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+
+      <div class="footer_container glass-effect">
+        
+        <div class="footer_top">
+          <div class="footer_left   footer_block">
+            <img src="img/sun.png" class="footer_img">
+            <span class="footer_desc">WEATHER.APP</span>
+          </div>
+          <div class="footer_right  footer_block">
+            <a class="footer_value" href="https://t.me/AbdulRahmanD_web"target="_blank">Telegram</a>
+            <a class="footer_value" href="https://github.com/AbdulRahmanD-web" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <div class="footer_bot">
+          <span class="footer_text">© 2026 Weather App</span>
+        </div>
+
+      </div>
+    </footer>
+
+
+    <script  src="js/app.js"></script>
+  </body>
+</html>
